@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function addRow(tableID) {  
+            var table = document.getElementById(tableID);
+            
+    
+    var rowCount = table.rows.length;
+    var row = table.insertRow(rowCount);
+
+    var colCount = table.rows[4].cells.length;
+    //document.write(rowCount+" "+row+" "+colCount)
+
+    for(var i=0; i<colCount; i++) {
+
+        var newcell	= row.insertCell(i);
+
+        newcell.innerHTML = table.rows[4].cells[i].innerHTML;
+    }
+    var r=table.rows.length;
+    
+    table.rows[r-1].className="beg"
+    table.rows[r-1].cells[0].className="mid"
+    table.rows[r-1].cells[15].className="end"
+        }  
+        </script>
+        <style>
+            .beg{
+                background-color: red;
+            }
+            .mid{
+                background-color: white;
+            }
+            .end{
+                background-color:white;
+            }
+        </style>
+    </head>
+    <body>
+        <table border="1px solid white" cellspacing=0 id="tableID">
+            <caption> I INTERNAL EXAM CO ATTAINMENT</caption>
+            <tr style="background-color: yellow;">
+                <td style="background-color: burlywood;">Course Outcome</td>
+                <td>CO1</td>
+                <td>CO1</td>
+                <td>CO1</td>
+                <td>CO2</td>
+                <td>CO2</td>
+                <td>CO2</td>
+                <td>CO1</td>
+                <td>CO1</td>
+                <td>CO2</td>
+                <td>CO2</td>
+                <td>CO1</td>
+                <td>CO1</td>
+                <td>CO2</td>
+                <td>CO2</td>
+                <td style="background-color: white;"></td>
+            </tr>
+            <tr style="background-color: brown;">
+                <td style="background-color: white;">Marks</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+                <td style="background-color: white;"></td>
+            </tr>
+            <tr style="background-color: brown;">
+                <td style="background-color: cadetblue;">50% Marks</td>
+                <td>0.5</td>
+                <td>0.5</td>
+                <td>0.5</td>
+                <td>0.5</td>
+                <td>0.5</td>
+                <td>0.5</td>
+                <td>1.5</td>
+                <td>1.5</td>
+                <td>1.5</td>
+                <td>1.5</td>
+                <td>1.5</td>
+                <td>1.5</td>
+                <td>1.5</td>
+                <td>1.5</td>
+                <td style="background-color: white;"></td>
+            </tr>
+            <tr style="color:red">
+                <td>H.No.</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11a</td>
+                <td>11b</td>
+                <td>12a</td>
+                <td>12b</td>
+                <td>T</td>
+            </tr>
+            <tr style="width:2cm;background-color: red;">
+                <td style="background-color: white;"><input type="text" name="text" value="" style="color:black;"/></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td style="background-color: white;"></td>
+            </tr>
+
+        </table>
+        <br/>
+            <input type="button" value="add row" onclick="addRow('tableID')"/>
+        
+       
+          
+    </body>
+</html>
